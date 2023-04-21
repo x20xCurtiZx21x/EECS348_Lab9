@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice 2(Changing Colors!)</title>
+    <link rel="stylesheet" href="chase.css">
+	<style>
+		.dummy {
+			padding: 10px;
+			background-color: white;
+			color: black;
+			border: 2px solid black;
+			width: 30%;
+			
+		}
+
+		input[type="text"] {
+			padding: 5px;
+			margin-right: 10px;
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+
+	<center>
+
+		<h1>Changing Colors!</h1>
+
+		<hr color="black" size="15"/>
+
+	</center>
+
+	<table>
+		<tr>
+			<th><p>Additional Links:</p></th>
+		</tr>
+		<tr>
+			<td>
+				<center>
+					<p>
+					<a href="practice1.html">Practice 1</a><br/>
+					<a href="practice3.html">Practice 3</a><br/>
+					<a href="practice4.html">Practice 4</a><br/>
+					<a href="index.html">Home</a></p>
+				</center>
+			</td>
+		</tr>
+
+	</table>
+
+	<div style="float:left">
+
+	<h2>Paragraph Color: </h2>
+	<input type="text" id="para-red" placeholder="red">
+	<input type="text" id="para-green" placeholder="green">
+	<input type="text" id="para-blue" placeholder="blue"><br/>
+
+	<h2>Border Color: </h2>
+	<input type="text" id="border-red" placeholder="red">
+	<input type="text" id="border-green" placeholder="green">
+	<input type="text" id="border-blue" placeholder="blue"><br/>
+
+	<h2>Border Width: </h2>
+	<input type="text" id="border-width" placeholder="px"><br/>
+
+	</div>
+
+	<center>
+
+		<br/>
+
+		<br/>
+
+		<br/>
+
+		<br/>
+
+		<br/>
+
+		<br/>
+
+		<p id="change" class="dummy">This is an example to change the paragraph background color, border color, and border width!</p>
+
+	</center>
+
+
+
+	<script>
+
+		function changeColor() {
+
+			const paraColor = `rgb(${paraRed.value}, ${paraGreen.value}, ${paraBlue.value})`;
+			const borderColor = `rgb(${borderRed.value}, ${borderGreen.value}, ${borderBlue.value})`;
+
+			change.style.backgroundColor = paraColor;
+			change.style.borderColor = borderColor;
+			change.style.borderWidth = `${borderWidth.value}px`;
+		}
+
+		const paraRed = document.getElementById('para-red');
+		const paraGreen = document.getElementById('para-green');
+		const paraBlue = document.getElementById('para-blue');
+		const borderRed = document.getElementById('border-red');
+		const borderGreen = document.getElementById('border-green');
+		const borderBlue = document.getElementById('border-blue');
+		const borderWidth = document.getElementById('border-width');
+		const change = document.getElementById('change');
+
+		paraRed.addEventListener('input', changeColor);
+		paraGreen.addEventListener('input', changeColor);
+		paraBlue.addEventListener('input', changeColor);
+		borderRed.addEventListener('input', changeColor);
+		borderGreen.addEventListener('input', changeColor);
+		borderBlue.addEventListener('input', changeColor);
+		borderWidth.addEventListener('input', changeColor);
+
+	</script>
+</body>
+</html>

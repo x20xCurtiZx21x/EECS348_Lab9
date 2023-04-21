@@ -1,0 +1,12 @@
+body {background-color: #E59EEC;}
+h1 {font-size: 50px;
+    font-family: "times new roman";}
+h2 {font-size: 35px;
+    font-family: "times new roman";}
+h3 {font-size: 15px;
+    font-family: "times new roman";}
+p, ul {font-size: 20px;
+    font-family: "times new roman";}
+table {float: right;
+    margin-right: 15px;}
+.chase {border: 10px solid black;}
